@@ -1,4 +1,6 @@
 import pygame
+import os
+
 
 import assets
 import configs
@@ -16,7 +18,7 @@ screen = pygame.display.set_mode((configs.SCREEN_WIDTH, configs.SCREEN_HEIGHT))
 
 pygame.display.set_caption("Flappy Bird Game v1.0.2")
 
-img = pygame.image.load('assets/icons/red_bird.png')
+img = pygame.image.load(os.path.join(os.path.dirname(__file__), "assets", "icons", "red_bird.png"))
 pygame.display.set_icon(img)
 
 
